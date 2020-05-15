@@ -1,0 +1,22 @@
+
+extends ../layout
+
+block content
+  .container
+    .row
+      .col-12
+        .jumbotron.jumbotron-fluid.rounded.my-2.text-center
+          .container
+            h1= t('The Best Node.js Framework')
+            p.lead= t('Lad scaffolds a Koa webapp and API framework for Node.js')
+            a.btn.btn-lg.btn-success(href=config.urls.web, role="button")= t('Try the demo')
+    .row
+      .col-12
+        p
+          :markdown-it(langPrefix='hljs ')
+            ```sh
+            npm install -g lad
+            lad new-project
+            cd new-project
+            npm start
+            ```
